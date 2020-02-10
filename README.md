@@ -15,7 +15,7 @@ React Native collapsible navBar implementation.
 
 ## Getting started
 
-`$ yarn add react-native-collapsible-navbar-scrollview`
+`$ yarn add @busfor/react-native-collapsible-navbar-scrollview`
 
 ## Usage
 
