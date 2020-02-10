@@ -1,7 +1,7 @@
 {
   "name": "@busfor/react-native-collapsible-navbar-scrollview",
   "title": "React Native Collapsible NavBar ScrollView",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Native collapsible navBar implementation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
