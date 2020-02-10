@@ -8,7 +8,7 @@ React Native collapsible navBar implementation.
 
 <div>
 <img width="280px" src="example.gif" />
-<img width="280px" src="example.gif" />
+<img width="280px" src="realcase.gif" />
 </div>
 
 ---
