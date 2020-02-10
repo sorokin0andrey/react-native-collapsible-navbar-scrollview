@@ -1,0 +1,43 @@
+{
+  "name": "@busfor/react-native-collapsible-navbar-scrollview",
+  "title": "React Native Collapsible NavBar ScrollView",
+  "version": "1.0.0",
+  "description": "React Native collapsible navBar implementation",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/busfor/react-native-collapsible-navbar-scrollview.git",
+    "baseUrl": "https://github.com/busfor/react-native-collapsible-navbar-scrollview"
+  },
+  "keywords": [
+    "react-native",
+    "navbar",
+    "header",
+    "collapsible",
+    "scrollview"
+  ],
+  "author": {
+    "name": "Andrey Sorokin",
+    "email": "sorokin0andrey@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.59.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.19",
+    "@types/react-native": "^0.61.12",
+    "auto-changelog": "^1.16.2",
+    "react": "^16.12.0",
+    "react-native": "^0.59.10",
+    "typescript": "^3.7.5"
+  }
+}

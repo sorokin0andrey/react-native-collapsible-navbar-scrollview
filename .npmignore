@@ -1,0 +1,8 @@
+example
+scripts
+.vscode
+.idea
+.gradle
+build
+local.properties
+android.iml

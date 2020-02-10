@@ -1,0 +1,28 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "setup": "rm -rf ./node_modules && yarn",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-ios",
+    "postinstall": "node ../scripts/examples_postinstall.js"
+  },
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59",
+    "@busfor/react-native-collapsible-navbar-scrollview": "file:../"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
