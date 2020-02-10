@@ -190,12 +190,12 @@ export const CollapsibleNavBarScrollView = memo(
         (): CollapsibleNavBarScrollViewRef | null => {
           if (contentScrollViewRef.current) {
             // @ts-ignore
-            return {
-              ...contentScrollViewRef.current,
-              open,
-              close,
-              scrollToView,
-            }
+            contentScrollViewRef.current.open = open
+            // @ts-ignore
+            contentScrollViewRef.current.close = close
+            // @ts-ignore
+            contentScrollViewRef.current.scrollToView = scrollToView
+            return contentScrollViewRef.current as CollapsibleNavBarScrollViewRef
           }
           return null
         },
