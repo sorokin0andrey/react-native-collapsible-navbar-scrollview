@@ -1,8 +1,8 @@
 # react-native-collapsible-navbar-scrollview
 
 ![npm](https://img.shields.io/npm/dw/@busfor/react-native-collapsible-navbar-scrollview?style=for-the-badge)
-[![npm (tag)](https://img.shields.io/npm/v/@busfor/react-native-collapsible-navbar-scrollview/latest?style=for-the-badge)](https://img.shields.io/npm/v/@busfor/react-native-collapsible-navbar-scrollview/latest?style=for-the-badge)
-[![](https://img.shields.io/npm/types/typescript?style=for-the-badge)](https://img.shields.io/npm/types/typescript?style=for-the-badge)
+[![npm (tag)](https://img.shields.io/npm/v/@busfor/react-native-collapsible-navbar-scrollview/latest?style=for-the-badge)](https://www.npmjs.com/package/@busfor/react-native-collapsible-navbar-scrollview)
+![](https://img.shields.io/npm/types/typescript?style=for-the-badge)
 
 React Native collapsible navBar implementation.
 
