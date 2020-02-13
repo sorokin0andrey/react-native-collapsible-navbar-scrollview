@@ -13,8 +13,6 @@ import {
   Animated,
   ScrollView,
   View,
-  Dimensions,
-  Platform,
   NativeSyntheticEvent,
   NativeScrollEvent,
   ScrollViewProps,
@@ -29,8 +27,7 @@ import {
   CollapsibleNavBarState,
   CollapsibleNavBarActionOptions,
 } from './types'
-
-const { height: SCREEN_HEIGHT } = Dimensions.get('window')
+import { SCREEN_HEIGHT, isAndroid } from './constants'
 
 export const CollapsibleNavBarScrollView = memo(
   forwardRef<CollapsibleNavBarScrollViewRef | null, CollapsibleNavBarScrollViewProps & ScrollViewProps>(
@@ -137,7 +134,7 @@ export const CollapsibleNavBarScrollView = memo(
         (e: NativeSyntheticEvent<NativeScrollEvent>) => {
           isDraging.current = false
           const velocity = e.nativeEvent.velocity?.y || 0
-          if (velocity === 0 || (Platform.OS === 'android' && Math.abs(Math.round(velocity)) <= 2)) {
+          if (velocity === 0 || (isAndroid && Math.abs(Math.round(velocity)) <= 2)) {
             handleIntermediateState()
           }
         },
@@ -155,7 +152,7 @@ export const CollapsibleNavBarScrollView = memo(
 
       const handleLayout = useCallback(
         (event: LayoutChangeEvent) => {
-          if (firstRender.current && initialState === CollapsibleNavBarState.closed) {
+          if (firstRender.current && initialState === CollapsibleNavBarState.closed && isAndroid) {
             close({ animated: false })
           }
           if (onLayout) {
