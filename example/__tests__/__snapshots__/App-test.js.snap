@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      bounces={false}
+      contentOffset={
+        Object {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      overScrollMode="never"
+      scrollEventThrottle={16}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "height": 300,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(22, 177, 247, 1)",
+                "flex": 1,
+              }
+            }
+          />
+        </View>
+        <RCTScrollView
+          bounces={false}
+          nestedScrollEnabled={true}
+          onLayout={[Function]}
+          onScrollEndDrag={[Function]}
+          style={
+            Array [
+              undefined,
+              Object {
+                "height": 1278,
+              },
+            ]
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#b8e2f5",
+                  "height": 200,
+                  "marginBottom": 12,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#b8e2f5",
+                  "height": 200,
+                  "marginBottom": 12,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#b8e2f5",
+                  "height": 200,
+                  "marginBottom": 12,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#b8e2f5",
+                  "height": 200,
+                  "marginBottom": 12,
+                }
+              }
+            />
+          </View>
+        </RCTScrollView>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;

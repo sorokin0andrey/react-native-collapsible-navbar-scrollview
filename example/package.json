@@ -9,13 +9,14 @@
     "postinstall": "node ../scripts/examples_postinstall.js"
   },
   "dependencies": {
+    "@busfor/react-native-collapsible-navbar-scrollview": "file:../",
     "react": "16.8.3",
-    "react-native": "0.59",
-    "@busfor/react-native-collapsible-navbar-scrollview": "file:../"
+    "react-native": "0.59"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
+    "@types/react-test-renderer": "^16.9.2",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.58.0",
