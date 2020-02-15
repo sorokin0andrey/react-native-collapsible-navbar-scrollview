@@ -173,12 +173,11 @@ export const CollapsibleNavBarScrollView = memo(
         [containerHeight]
       )
 
-      const scrollToView = useCallback((viewRef: ReactNode, offset = 0) => {
-        if (viewRef && contentScrollViewRef.current) {
-          contentScrollViewRef.current
-            .getScrollResponder()
-            // @ts-ignore
-            .scrollResponderScrollNativeHandleToKeyboard(findNodeHandle(viewRef), offset, true)
+      const scrollToView = useCallback((viewRef: View, offset = 0) => {
+        if (viewRef && viewRef.measure && contentScrollViewRef.current) {
+          viewRef.measure((ox, oy) => {
+            contentScrollViewRef.current.scrollTo({ y: oy })
+          })
         }
       }, [])
 

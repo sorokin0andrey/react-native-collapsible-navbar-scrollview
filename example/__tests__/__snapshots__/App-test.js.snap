@@ -87,6 +87,20 @@ exports[`renders correctly 1`] = `
             />
             <View
               style={
+                Array [
+                  Object {
+                    "backgroundColor": "#b8e2f5",
+                    "height": 200,
+                    "marginBottom": 12,
+                  },
+                  Object {
+                    "backgroundColor": "#b8bff5",
+                  },
+                ]
+              }
+            />
+            <View
+              style={
                 Object {
                   "backgroundColor": "#b8e2f5",
                   "height": 200,
@@ -103,6 +117,55 @@ exports[`renders correctly 1`] = `
                 }
               }
             />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#b8e2f5",
+                  "height": 200,
+                  "marginBottom": 12,
+                }
+              }
+            />
+            <View
+              accessibilityRole="button"
+              accessibilityStates={Array []}
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {},
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#007AFF",
+                        "fontSize": 18,
+                        "padding": 8,
+                        "textAlign": "center",
+                      },
+                    ]
+                  }
+                >
+                  Scroll to View
+                </Text>
+              </View>
+            </View>
           </View>
         </RCTScrollView>
       </View>
