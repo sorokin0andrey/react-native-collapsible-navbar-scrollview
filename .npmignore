@@ -9,3 +9,4 @@ tsconfig.json
 build
 local.properties
 android.iml
+.eslintrc.js
