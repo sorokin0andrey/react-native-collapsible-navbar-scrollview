@@ -1,14 +1,4 @@
-import React, {
-  memo,
-  useRef,
-  useCallback,
-  useEffect,
-  useMemo,
-  ReactNode,
-  useState,
-  forwardRef,
-  useImperativeHandle,
-} from 'react'
+import React, { memo, useRef, useCallback, useEffect, useMemo, useState, forwardRef, useImperativeHandle } from 'react'
 import {
   Animated,
   ScrollView,
@@ -17,7 +7,6 @@ import {
   NativeScrollEvent,
   ScrollViewProps,
   LayoutChangeEvent,
-  findNodeHandle,
 } from 'react-native'
 
 import useTimeout from './useTimeout'
@@ -174,9 +163,11 @@ export const CollapsibleNavBarScrollView = memo(
       )
 
       const scrollToView = useCallback((viewRef: View, offset = 0) => {
-        if (viewRef && viewRef.measure && contentScrollViewRef.current) {
+        if (viewRef && viewRef.measure) {
           viewRef.measure((ox, oy) => {
-            contentScrollViewRef.current.scrollTo({ y: oy })
+            if (contentScrollViewRef.current) {
+              contentScrollViewRef.current.scrollTo({ y: oy + offset })
+            }
           })
         }
       }, [])
