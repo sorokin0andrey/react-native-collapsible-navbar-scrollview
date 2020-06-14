@@ -7,7 +7,10 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "lint": "eslint --ext .tsx,.ts ./src",
+    "example:install": "cd ./example && yarn",
+    "example:test": "cd ./example && yarn test"
   },
   "repository": {
     "type": "git",

@@ -7,6 +7,7 @@ import {
   NativeScrollEvent,
   ScrollViewProps,
   LayoutChangeEvent,
+  StyleSheet,
 } from 'react-native'
 
 import useTimeout from './useTimeout'
@@ -78,8 +79,13 @@ export const CollapsibleNavBarScrollView = memo(
         (options?: CollapsibleNavBarActionOptions) => {
           setOpened(true)
           if (scrollViewRef.current) {
-            // @ts-ignore
-            scrollViewRef.current.getNode().scrollTo({ y: 0, animated: options ? options?.animated : true })
+            const scrollParams = { y: 0, animated: options ? options?.animated : true }
+            if (typeof scrollViewRef.current.scrollTo === 'function') {
+              scrollViewRef.current.scrollTo(scrollParams)
+            } else {
+              // @ts-ignore
+              scrollViewRef.current.getNode().scrollTo(scrollParams)
+            }
           }
         },
         [setOpened]
@@ -89,8 +95,13 @@ export const CollapsibleNavBarScrollView = memo(
         (options?: { animated: boolean }) => {
           setOpened(false)
           if (scrollViewRef.current) {
-            // @ts-ignore
-            scrollViewRef.current.getNode().scrollToEnd({ animated: options ? options?.animated : true })
+            const scrollParams = { animated: options ? options?.animated : true }
+            if (typeof scrollViewRef.current.scrollToEnd === 'function') {
+              scrollViewRef.current.scrollToEnd(scrollParams)
+            } else {
+              // @ts-ignore
+              scrollViewRef.current.getNode().scrollToEnd(scrollParams)
+            }
           }
         },
         [setOpened]
@@ -208,7 +219,7 @@ export const CollapsibleNavBarScrollView = memo(
       }, [])
 
       return (
-        <View style={{ flex: 1 }} onLayout={handleContainerLayout}>
+        <View style={styles.container} onLayout={handleContainerLayout}>
           <Animated.ScrollView
             bounces={false}
             showsVerticalScrollIndicator={false}
@@ -248,3 +259,9 @@ export const CollapsibleNavBarScrollView = memo(
     }
   )
 )
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+})

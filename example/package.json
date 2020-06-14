@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
     "android": "react-native run-ios",
-    "postinstall": "node ../scripts/examples_postinstall.js"
+    "postinstall": "node ../scripts/examples_postinstall.js",
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "@busfor/react-native-collapsible-navbar-scrollview": "file:../",
