@@ -234,7 +234,7 @@ export const CollapsibleNavBarScrollView = memo(
             overScrollMode='never'
             contentOffset={contentOffset}
             // @ts-ignore
-            ref={scrollViewRef}
+            {...(typeof jest === 'undefined' ? { ref: scrollViewRef } : {})}
           >
             <View
               style={{
